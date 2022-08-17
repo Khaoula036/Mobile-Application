@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
+
+// You can import from local files
+import AssetExample from './components/AssetExample';
+import AcceuilScreen from './Screens/Authentification/AcceuilScreen';
+import AuthentificationScreen from './Screens/Authentification/AuthentificationScreen';
+import MailScreen from './Screens/Authentification/MailScreen';
+import MotDePasseScreen from './Screens/Authentification/MotDePasseScreen';
+import ProfilScreen from './Screens/Authentification/ProfilScreen';
+
+
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View >
+      <Card>
+        <AuthentificationScreen/>
+      </Card>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
