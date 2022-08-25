@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 
-function ParametreProfilScreen() {
+function ParametreProfilScreen({ navigation }) {
   return (
     <View>
       <Text>ParametreProfilScreen</Text>
@@ -10,3 +10,5 @@ function ParametreProfilScreen() {
 }
 
 export default ParametreProfilScreen;
+
+

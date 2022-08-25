@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Image, StyleSheet, View } from 'react-native'
 
-const LogoS = () => (
+const Logo = () => (
   <View >
    <Image style={styles.logo} source={require('../assets/Image/Logo.jpg')} />
 
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LogoS;
+export default Logo;

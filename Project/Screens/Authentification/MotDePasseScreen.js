@@ -3,7 +3,7 @@ import { Text, View, Button, StyleSheet, TextInput, Alert } from 'react-native';
 import LogoS from '../LogoS';
 import TextSaisie from '../../components/TextSaisie';
 
-function MotDePasseScreen() {
+function MotDePasseScreen({ navigation }) {
   return (
     <View>
       <LogoS />
@@ -14,11 +14,11 @@ function MotDePasseScreen() {
       <View style={styles.fixToText}>
        <Button
           title="Précedent"
-          onPress={() => Alert.alert('Left button pressed')}
+          onPress={() =>  navigation.navigate("Mail")}
         />
         <Button
           title="Suivant"
-          onPress={() => Alert.alert('Right button pressed')}
+          onPress={() => navigation.navigate("Profile")}
         />
       </View>
     </View>
