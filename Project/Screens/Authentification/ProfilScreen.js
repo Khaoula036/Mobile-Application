@@ -3,7 +3,7 @@ import { Text, View, Button, StyleSheet, TextInput, Alert } from 'react-native';
 import LogoS from '../LogoS';
 import ProfilSaisie from '../../components/ProfilSaisie';
 
-function ProfilScreen() {
+function ProfilScreen({ navigation }) {
   return (
     <View>
       <LogoS />
@@ -13,7 +13,7 @@ function ProfilScreen() {
       <View style={styles.fixToText}>
         <Button
           title="Suivant"
-          onPress={() => Alert.alert(' Button pressed')}
+          onPress={() =>  navigation.navigate("Authentification")}
         />
       </View>
     </View>

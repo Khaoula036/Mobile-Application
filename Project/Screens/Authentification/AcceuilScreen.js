@@ -4,7 +4,7 @@ import Logo from '../Logo';
 import Constants from 'expo-constants';
 //import Bouton from '../../components/Bouton';
 
-function AcceuilScreen() {
+function AcceuilScreen({ navigation }) {
   return (
     <View>
       <Logo />
@@ -15,11 +15,11 @@ function AcceuilScreen() {
       <View style={styles.fixToText}>
         <Button
           title="S'inscrire"
-          onPress={() => Alert.alert('Simple Button pressed')}
+          onPress={() => navigation.navigate("Mail")}
         />
         <Button
           title="Se connecter"
-          onPress={() => Alert.alert(' Button pressed')}
+          onPress={() => navigation.navigate("Authentification")}
         />
       </View>
     </View>
