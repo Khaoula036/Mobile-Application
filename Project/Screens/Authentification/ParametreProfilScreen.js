@@ -11,4 +11,3 @@ function ParametreProfilScreen({ navigation }) {
 
 export default ParametreProfilScreen;
 
-
