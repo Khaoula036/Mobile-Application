@@ -3,7 +3,7 @@ import { Text, View, Button, StyleSheet, TextInput, Alert } from 'react-native';
 import LogoS from '../LogoS';
 import TextInputt from '../../components/TextInputt';
 
-function MailScreen() {
+function MailScreen({ navigation }) {
   return (
     <View>
       <LogoS />
@@ -11,9 +11,13 @@ function MailScreen() {
       <Text style={styles.paragraph}> Saisissez votre adresse mail</Text>
       <TextInputt />
       <View style={styles.fixToText}>
+       <Button
+          title="Précedent"
+          onPress={() =>  navigation.navigate("Acceuil")}
+        />
         <Button
           title="Suivant"
-          onPress={() => Alert.alert(' Button pressed')}
+          onPress={() => navigation.navigate("Pass")}
         />
       </View>
     </View>
@@ -41,12 +45,15 @@ const styles = StyleSheet.create({
     color: 'palevioletred',
   },
 
-  fixToText: {
+ fixToText: {
     textAlign: 'center',
     marginVertical: 80,
-    marginHorizontal: 70,
+    marginHorizontal: 50,
     color: 'palevioletred',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
+
 
  
 });
