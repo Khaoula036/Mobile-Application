@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 
-function SexprimerScreen() {
+function SexprimerScreen({ navigation }) {
   return (
     <View>
       <Text>SexprimerScreen</Text>

@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, TextInput } from 'react-native';
 
 const TextInputt = () => {
   const [text, onChangeText] = React.useState('E-mail');
+  
 
   return (
     <SafeAreaView>

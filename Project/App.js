@@ -2,43 +2,49 @@ import { StatusBar } from 'expo-status-bar'
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
+import { Card } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
+import { Statusbar } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-
-const Stack = createNativeStackNavigator();
-
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 
+const tab = createBottomTabNavigator();
 
-
-// You can import from local files
-import AssetExample from './components/AssetExample';
+//Ecran d'acceuil
 import AcceuilScreen from './Screens/Authentification/AcceuilScreen';
+//Ecrans d'authentification
 import AuthentificationScreen from './Screens/Authentification/AuthentificationScreen';
 import MailScreen from './Screens/Authentification/MailScreen';
 import MotDePasseScreen from './Screens/Authentification/MotDePasseScreen';
 import ProfilScreen from './Screens/Authentification/ProfilScreen';
+//import BottomNav from './Navigation/BottomNav';
+import Barre from "./Navigation/Barre";
 
-
-// or any pure javascript modules available in npm
-import { Card } from 'react-native-paper';
-import ParametreScreen from './Screens/ParametreScreen';
-import HomeScreen from './Screens/HomeScreen';
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer >
-      <Stack.Navigator>
-        <Stack.Screen options= {{ headerShown: false}} name= "Parametre" component={ParametreScreen} />
-        <Stack.Screen name= "Home" component={HomeScreen} />
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Acceuil"
+        screenOptions={{ headerShown: false }}>
+        {/*les écrans d'authentification*/}
+        <Stack.Screen name="Acceuil" component={AcceuilScreen} />
+        <Stack.Screen name="Mail" component={MailScreen} />
+        <Stack.Screen name="Pass" component={MotDePasseScreen} />
+        <Stack.Screen name="Profile" component={ProfilScreen} />
+        <Stack.Screen name="Authentification" component={AuthentificationScreen} />
+        <Stack.Screen name="Barre" component={Barre} />
       </Stack.Navigator>
-      </NavigationContainer>
-      
+ 
+    </NavigationContainer>
+
     
   );
 }
+
 
 

@@ -1,17 +1,28 @@
 import * as React from 'react';
-import { Text, View, Button, StyleSheet, TextInput, Alert } from 'react-native';
+import {
+  Text,
+  View,
+  Button,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import LogoS from '../LogoS';
 import AuthentifSaisie from '../../components/AuthentifSaisie';
 
-function AuthentificationScreen() {
+function AuthentificationScreen({ navigation }) {
   return (
     <View>
       <LogoS />
       <Text style={styles.headline}> Helppicto</Text>
       <Text style={styles.titre}> Connexion </Text>
       <AuthentifSaisie />
-      <View style={styles.fixToText}>
-      </View>
+      <TouchableOpacity
+        style={styles.submitButton}
+        onPress={() => navigation.navigate("Barre")}>
+        <Text style={styles.submitButtonText}> Se connecter </Text>
+      </TouchableOpacity>
+      <View style={styles.fixToText}></View>
     </View>
   );
 }
@@ -28,7 +39,7 @@ const styles = StyleSheet.create({
     color: 'darkblue',
   },
 
-   titre: {
+  titre: {
     margin: 24,
     marginTop: 50,
     fontSize: 40,
@@ -37,7 +48,6 @@ const styles = StyleSheet.create({
     color: 'black',
   },
 
-
   fixToText: {
     textAlign: 'center',
     marginVertical: 60,
@@ -45,9 +55,15 @@ const styles = StyleSheet.create({
     color: 'palevioletred',
   },
 
- 
+  submitButton: {
+    backgroundColor: '#7a42f4',
+    padding: 10,
+    margin: 15,
+    height: 40,
+  },
+  submitButtonText: {
+    color: 'white',
+  },
 });
-
-
 
 export default AuthentificationScreen;
