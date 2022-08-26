@@ -11,11 +11,13 @@ const TextSaisie = () => {
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
+        secureTextEntry
       />
       <TextInput
         style={styles.input}
         onChangeText={onChangeTextt}
         value={textt}
+        secureTextEntry
       />
     </SafeAreaView>
   );
