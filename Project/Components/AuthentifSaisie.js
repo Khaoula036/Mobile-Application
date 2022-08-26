@@ -30,9 +30,8 @@ class AuthentifSaisie extends Component {
                placeholder = "Password"
                placeholderTextColor = "#9a73ef"
                autoCapitalize = "none"
-               onChangeText = {this.handlePassword}/>
-            
-          
+               onChangeText = {this.handlePassword}
+               secureTextEntry/>
          </View>
       ) 
    }
